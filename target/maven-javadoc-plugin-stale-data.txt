@@ -1,0 +1,45 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'E:/github/mots-pendule/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2026. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'E:/github/mots-pendule/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'mots-pendule 1.0.0 API'
+-use
+-version
+-windowtitle
+'mots-pendule 1.0.0 API'
+com.mots.pendule.app
+com.mots.pendule.core
+com.mots.pendule.data
+E:\github\mots-pendule\src\main\java = 1768229536363
+E:\github\mots-pendule\target\site\apidocs\allclasses-index.html = 1768234046694
+E:\github\mots-pendule\target\site\apidocs\allpackages-index.html = 1768234046699
+E:\github\mots-pendule\target\site\apidocs\element-list = 1768234046562
+E:\github\mots-pendule\target\site\apidocs\help-doc.html = 1768234046730
+E:\github\mots-pendule\target\site\apidocs\index-all.html = 1768234046721
+E:\github\mots-pendule\target\site\apidocs\index.html = 1768234046674
+E:\github\mots-pendule\target\site\apidocs\jquery-ui.overrides.css = 1768234046743
+E:\github\mots-pendule\target\site\apidocs\member-search-index.js = 1768234046707
+E:\github\mots-pendule\target\site\apidocs\module-search-index.js = 1768234046701
+E:\github\mots-pendule\target\site\apidocs\overview-summary.html = 1768234046724
+E:\github\mots-pendule\target\site\apidocs\overview-tree.html = 1768234046671
+E:\github\mots-pendule\target\site\apidocs\package-search-index.js = 1768234046703
+E:\github\mots-pendule\target\site\apidocs\script.js = 1768234046733
+E:\github\mots-pendule\target\site\apidocs\search.js = 1768234046735
+E:\github\mots-pendule\target\site\apidocs\stylesheet.css = 1768234046732
+E:\github\mots-pendule\target\site\apidocs\tag-search-index.js = 1768234046708
+E:\github\mots-pendule\target\site\apidocs\type-search-index.js = 1768234046705

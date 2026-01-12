@@ -1,0 +1,6 @@
+com\mots\pendule\app\Main.class
+com\mots\pendule\core\GameStatus.class
+com\mots\pendule\core\GameEngine.class
+com\mots\pendule\data\DictionaryLoader.class
+com\mots\pendule\core\GuessResult.class
+com\mots\pendule\core\GameState.class

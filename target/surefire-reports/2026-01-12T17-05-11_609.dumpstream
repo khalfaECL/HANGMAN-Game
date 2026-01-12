@@ -1,0 +1,5 @@
+# Created at 2026-01-12T17:05:11.859
+Boot Manifest-JAR contains absolute paths in classpath 'E:\github\mots-pendule\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
