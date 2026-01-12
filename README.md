@@ -2,86 +2,95 @@
 
 Professional-grade hangman game in Java with automated build, tests, and docs.
 
-========================
-[ QUICK START GUIDE ]
-========================
+------------------------------------------------------------
+SECTION :: Quick Start (Run the game)
+------------------------------------------------------------
 
->> 1) Set Java 17 in your terminal (choose your shell)
+Step 1 — Set Java 17
 
 CMD:
-  set JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot
-  set PATH=%JAVA_HOME%\bin;%PATH%
+```
+set JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot
+set PATH=%JAVA_HOME%\bin;%PATH%
+java -version
+```
 
 PowerShell:
-  $env:JAVA_HOME='C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot'
-  $env:Path = "$env:JAVA_HOME\bin;" + $env:Path
+```powershell
+$env:JAVA_HOME='C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot'
+$env:Path = "$env:JAVA_HOME\bin;" + $env:Path
+java -version
+```
 
->> 2) Build + run (Maven)
-  mvn clean test package
-  java -jar target\mots-pendule-1.0.0.jar
+Step 2 — Build and run (Maven)
+```
+mvn clean test package
+java -jar target\mots-pendule-1.0.0.jar
+```
 
->> 3) Play (interactive flow)
-  - Choose max errors
-  - Choose mode: 1=solo, 2=two players
-  - Enter letters until you win or run out of errors
+Gameplay flow
+- Choose max errors
+- Choose mode (1=solo, 2=two players)
+- Enter letters until win/lose
 
-========================
-[ PROJECT MAP ]
-========================
+------------------------------------------------------------
+SECTION :: Project Map
+------------------------------------------------------------
 
-CORE ENGINE:
-  src/main/java/com/mots/pendule/core
+- Core engine: `src/main/java/com/mots/pendule/core`
+- Dictionary: `src/main/resources/dictionary.txt`
+- CLI entry: `src/main/java/com/mots/pendule/app/Main.java`
+- Tests: `src/test/java/com/mots/pendule/core/GameEngineTest.java`
 
-DATA (DICTIONARY):
-  src/main/resources/dictionary.txt
+------------------------------------------------------------
+SECTION :: Build, Tests, Docs
+------------------------------------------------------------
 
-CLI ENTRY:
-  src/main/java/com/mots/pendule/app/Main.java
+Requirements
+- Java 17+
+- Maven 3.9+ or Ant 1.10+
 
-TESTS:
-  src/test/java/com/mots/pendule/core/GameEngineTest.java
+Maven commands
+```
+mvn clean test
+mvn javadoc:javadoc
+mvn package
+```
 
-========================
-[ BUILD & DOCS ]
-========================
+Javadoc output
+- `target/site/apidocs`
 
-Requirements:
-  - Java 17+
-  - Maven 3.9+ or Ant 1.10+
+Ant commands (JUnit 4 jars required in `lib/`)
+- `lib/junit-4.13.2.jar`
+- `lib/hamcrest-core-1.3.jar`
 
-Maven:
-  mvn clean test
-  mvn javadoc:javadoc
-  mvn package
+```
+ant clean test
+ant javadoc
+ant jar
+```
 
-Javadoc output:
-  target/site/apidocs
+Sonar example
+```
+mvn sonar:sonar -Dsonar.projectKey=mots-pendule -Dsonar.host.url=http://localhost:9000 -Dsonar.login=YOUR_TOKEN
+```
 
-Ant (JUnit 4 jars required in lib/):
-  lib/junit-4.13.2.jar
-  lib/hamcrest-core-1.3.jar
+------------------------------------------------------------
+SECTION :: Troubleshooting
+------------------------------------------------------------
 
-  ant clean test
-  ant javadoc
-  ant jar
+Problem: "JNI error" or "Unsupported major.minor version"
+Fix: Set JAVA_HOME to Java 17 (see Quick Start).
 
-Sonar (example):
-  mvn sonar:sonar -Dsonar.projectKey=mots-pendule -Dsonar.host.url=http://localhost:9000 -Dsonar.login=YOUR_TOKEN
+Problem: "mvn not recognized"
+Fix: Use the full path to Maven:
+```
+C:\Users\Lenovo\AppData\Local\Programs\Apache\apache-maven-3.9.9\bin\mvn.cmd
+```
 
-========================
-[ TROUBLESHOOTING ]
-========================
-
-* "JNI error" or "Unsupported major.minor version"
-  -> You are running Java 8. Set JAVA_HOME to Java 17 as shown above.
-
-* "mvn not recognized"
-  -> Use the full path:
-     C:\Users\Lenovo\AppData\Local\Programs\Apache\apache-maven-3.9.9\bin\mvn.cmd
-
-========================
-[ MAVEN TEST OUTPUT ]
-========================
+------------------------------------------------------------
+SECTION :: Maven Test Output (Saved)
+------------------------------------------------------------
 ```
 e:\github\mots-pendule>"C:\Users\Lenovo\AppData\Local\Programs\Apache\apache-maven-3.9.9\bin\mvn.cmd" test
 
