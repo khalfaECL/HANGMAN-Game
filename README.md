@@ -2,36 +2,86 @@
 
 Professional-grade hangman game in Java with automated build, tests, and docs.
 
-## Requirements
-- Java 17+ (or compatible)
-- Maven 3.9+ or Ant 1.10+
+========================
+[ QUICK START GUIDE ]
+========================
 
-## Build with Maven
-- `mvn clean test`
-- `mvn javadoc:javadoc`
-- `mvn package`
+>> 1) Set Java 17 in your terminal (choose your shell)
 
-## Build with Ant
-Ant expects JUnit 4 jars in `lib/`:
-- `lib/junit-4.13.2.jar`
-- `lib/hamcrest-core-1.3.jar`
+CMD:
+  set JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot
+  set PATH=%JAVA_HOME%\bin;%PATH%
 
-Then run:
-- `ant clean test`
-- `ant javadoc`
-- `ant jar`
+PowerShell:
+  $env:JAVA_HOME='C:\Program Files\Eclipse Adoptium\jdk-17.0.17.10-hotspot'
+  $env:Path = "$env:JAVA_HOME\bin;" + $env:Path
 
-## Sonar
-Example (configure your server/project):
-- `mvn sonar:sonar -Dsonar.projectKey=mots-pendule -Dsonar.host.url=http://localhost:9000 -Dsonar.login=YOUR_TOKEN`
+>> 2) Build + run (Maven)
+  mvn clean test package
+  java -jar target\mots-pendule-1.0.0.jar
 
-## Run
-- `java -jar target/mots-pendule.jar`
+>> 3) Play (interactive flow)
+  - Choose max errors
+  - Choose mode: 1=solo, 2=two players
+  - Enter letters until you win or run out of errors
 
-## Notes
-- Dictionary file: `src/main/resources/dictionary.txt`
+========================
+[ PROJECT MAP ]
+========================
 
-## Maven test output
+CORE ENGINE:
+  src/main/java/com/mots/pendule/core
+
+DATA (DICTIONARY):
+  src/main/resources/dictionary.txt
+
+CLI ENTRY:
+  src/main/java/com/mots/pendule/app/Main.java
+
+TESTS:
+  src/test/java/com/mots/pendule/core/GameEngineTest.java
+
+========================
+[ BUILD & DOCS ]
+========================
+
+Requirements:
+  - Java 17+
+  - Maven 3.9+ or Ant 1.10+
+
+Maven:
+  mvn clean test
+  mvn javadoc:javadoc
+  mvn package
+
+Javadoc output:
+  target/site/apidocs
+
+Ant (JUnit 4 jars required in lib/):
+  lib/junit-4.13.2.jar
+  lib/hamcrest-core-1.3.jar
+
+  ant clean test
+  ant javadoc
+  ant jar
+
+Sonar (example):
+  mvn sonar:sonar -Dsonar.projectKey=mots-pendule -Dsonar.host.url=http://localhost:9000 -Dsonar.login=YOUR_TOKEN
+
+========================
+[ TROUBLESHOOTING ]
+========================
+
+* "JNI error" or "Unsupported major.minor version"
+  -> You are running Java 8. Set JAVA_HOME to Java 17 as shown above.
+
+* "mvn not recognized"
+  -> Use the full path:
+     C:\Users\Lenovo\AppData\Local\Programs\Apache\apache-maven-3.9.9\bin\mvn.cmd
+
+========================
+[ MAVEN TEST OUTPUT ]
+========================
 ```
 e:\github\mots-pendule>"C:\Users\Lenovo\AppData\Local\Programs\Apache\apache-maven-3.9.9\bin\mvn.cmd" test
 
