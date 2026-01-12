@@ -91,6 +91,10 @@ C:\Users\Lenovo\AppData\Local\Programs\Apache\apache-maven-3.9.9\bin\mvn.cmd
 ------------------------------------------------------------
 SECTION :: Maven Test Output (Saved)
 ------------------------------------------------------------
+
+<details>
+<summary>Click to expand full Maven test output</summary>
+
 ```
 e:\github\mots-pendule>"C:\Users\Lenovo\AppData\Local\Programs\Apache\apache-maven-3.9.9\bin\mvn.cmd" test
 
@@ -135,3 +139,5 @@ e:\github\mots-pendule>"C:\Users\Lenovo\AppData\Local\Programs\Apache\apache-mav
 [INFO] Finished at: 2026-01-12T17:29:58+01:00
 [INFO] ------------------------------------------------------------------------
 ```
+
+</details>
