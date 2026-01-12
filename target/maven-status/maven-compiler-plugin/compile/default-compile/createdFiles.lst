@@ -2,5 +2,9 @@ com\mots\pendule\app\Main.class
 com\mots\pendule\core\GameStatus.class
 com\mots\pendule\core\GameEngine.class
 com\mots\pendule\data\DictionaryLoader.class
+com\mots\pendule\app\SwingApp$2.class
 com\mots\pendule\core\GuessResult.class
+com\mots\pendule\app\HangmanPanel.class
 com\mots\pendule\core\GameState.class
+com\mots\pendule\app\SwingApp$1.class
+com\mots\pendule\app\SwingApp.class

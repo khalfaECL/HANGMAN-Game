@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.mots.pendule.app"},{"l":"com.mots.pendule.core"},{"l":"com.mots.pendule.data"}];updateSearchResults();

@@ -6,7 +6,7 @@ Professional-grade hangman game in Java with automated build, tests, and docs.
 SECTION :: Quick Start (Run the game)
 ------------------------------------------------------------
 
-Step 1 — Set Java 17
+Step 1 - Set Java 17
 
 CMD:
 ```
@@ -22,16 +22,49 @@ $env:Path = "$env:JAVA_HOME\bin;" + $env:Path
 java -version
 ```
 
-Step 2 — Build and run (Maven)
+Step 2 - Build and run (Maven)
 ```
 mvn clean test package
 java -jar target\mots-pendule-1.0.0.jar
+```
+
+Optional - Run the GUI (Swing)
+```
+java -jar target\mots-pendule-1.0.0.jar --gui
 ```
 
 Gameplay flow
 - Choose max errors
 - Choose mode (1=solo, 2=two players)
 - Enter letters until win/lose
+
+------------------------------------------------------------
+SECTION :: Download (Windows)
+------------------------------------------------------------
+
+GitHub Releases (installer link):
+- https://github.com/khalfaECL/HANGMAN-Game/releases/latest
+
+------------------------------------------------------------
+SECTION :: Windows Installer (EXE)
+------------------------------------------------------------
+
+Requirements
+- JDK 17+ with `jpackage` (included in the JDK)
+- WiX Toolset 3.11+ (for Windows installers)
+- Maven 3.9+
+
+Build installer
+```
+powershell -ExecutionPolicy Bypass -File scripts\package-windows.ps1
+```
+
+Output
+- `dist` (contains the .exe installer)
+
+After install
+- Search Start Menu for `MotsPendule`
+- If you do not see it, uninstall the old version and re-run the installer
 
 ------------------------------------------------------------
 SECTION :: Project Map

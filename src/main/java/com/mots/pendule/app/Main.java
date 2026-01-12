@@ -17,6 +17,10 @@ import java.util.Scanner;
 public final class Main {
 
     public static void main(String[] args) throws IOException {
+        if (args != null && args.length > 0 && "--gui".equalsIgnoreCase(args[0])) {
+            SwingApp.launch();
+            return;
+        }
         Scanner scanner = new Scanner(System.in);
         System.out.println("Mots Pendule - Hangman");
 
